@@ -7,7 +7,6 @@ import ReactFlow, {
   Background, 
   addEdge,
   useEdgesState,
-  removeElements
   } from 'reactflow';
 
 import 'reactflow/dist/style.css';
@@ -167,7 +166,7 @@ function WorkflowDesignerPage() {
     
         <h3 style={{ border: '2px solid #DAF5FF', padding: '15px'}}>Modules</h3>
         {modules.map(module => (
-          <div key={module.id} onDragStart={(event) => onDragStart(event, module.name)} draggable style={{ marginRight: '110px', padding: '5px', marginBottom:'20px' ,border: '2px solid #DAF5FF', borderRadius: '5px'}}
+          <div key={module.id} onDragStart={(event) => onDragStart(event, module.name)} draggable style={{ marginRight: '110px', padding: '5px', marginBottom:'20px' ,border: '2px solid #DAF5FF', borderRadius: '5px', cursor: 'grab'}}
 
           data-id={module.id}
 
